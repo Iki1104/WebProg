@@ -1,0 +1,23 @@
+{% load static %}
+{% block content %}
+
+{% for obj in data_list%}
+<table>
+        <thead>
+                <tr>
+                        <td>NIM</td>
+                        <td>Nama</td>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                        <td> {{obj.account_user_student_number}}
+                        </td>
+                        <td> {{obj.fullname}}
+                        </td>
+                </tr>
+        </tbody>
+</table>{% empty%}
+<h1>Data masih kosong</h1>{% endfor %}
+
+{% endblock %}
